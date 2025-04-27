@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Syne:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper overpass-500">
+      <p>Зарплатный калькулятор</p>
+      <div class="calc">
+        <p>
+          <label for="rate">Выплачено:</label>
+          <input
+            id="rate"
+            type="text"
+            size="10"
+            placeholder="от 1.00 до 1000000.00"
+            maxlength="10"
+            required
+            autocomplete="off"
+            inputmode="numeric"
+          />
+        </p>
+      </div>
+      <div>
+        <button class="btn" id="calc">Рассчитать</button>
+        <button class="btn" id="reset">Сброс</button>
+      </div>
+      
+      <p>
+        <label for="totalIncome">До вычета:</label>
+        <output id="totalIncome"></output>
+      </p>
+      <p>
+        <label for="monthlyIncome">Налог:</label>
+        <output id="monthlyIncome"></output>
+      </p>
+    </div>
+
+    <script src="calc.js"></script>
+  </body>
+</html>

@@ -37,7 +37,7 @@ function calc() {
     return;
   }
 
-  let totalIncome = rate * 0.13 + rate;
+  let totalIncome = rate / 0.87;
   let monthlyIncome = totalIncome - rate;
 
 

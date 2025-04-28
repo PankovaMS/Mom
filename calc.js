@@ -26,6 +26,25 @@ rateInput.addEventListener("beforeinput", (e) => {
     e.preventDefault();
     return;
   }
+
+
+  // Ограничение: максимум 2 цифры после запятой или точки
+  let separatorIndex = e.target.value.indexOf(",");
+
+  if (separatorIndex === -1) {
+    separatorIndex = e.target.value.indexOf(".");
+  }
+  
+  // Если разделитель есть, ограничиваем количество символов после него двумя
+  if (separatorIndex !== -1) {
+    const digitsAfterSeparator = e.target.value.length - separatorIndex - 1;
+  
+     // Если курсор стоит после запятой или точки
+    if (e.target.selectionStart > separatorIndex && digitsAfterSeparator >= 2) {
+      e.preventDefault();
+      return;
+    }
+  }
 });
 
 function calc() {

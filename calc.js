@@ -12,6 +12,8 @@ rateInput.addEventListener('input', (e) => {
   // Удаляем ведущие нули
   v = v.replace(/^0+/, '');
   
+
+  
   if (v.startsWith('.')) {
     v = "";
   }
